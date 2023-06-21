@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: k8s-demo-operator
 repo: github.com/neat-vibes/k8s-demo-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: k8s-demo-operator.io
+  group: apps
+  kind: MyDaemonset
+  path: github.com/neat-vibes/k8s-demo-operator/api/v1beta1
+  version: v1beta1
 version: "3"
